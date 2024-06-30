@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+th:replace="~{normal/base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #343a40;
+        }
+        
+        label {
+            font-weight: 500;
+        }
+        
+        .form-control {
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+	<section>
+	<div class="my-card mt-4 mb-2 bg-transparent">
+        <h1 class="text-center text-white bg-dark">Resume </h1>
+     </div>
+	<div class="container">        
+
+        <form th:action="@{/user/process-resume}" enctype="multipart/form-data" method="post">
+
+            <!-- Personal Information -->
+            <div class="mb-3">
+                <label for="fullName" class="form-label"><i class="fa-solid fa-address-card"></i>  Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"><i class="fa-solid fa-envelope-open-text"></i>  Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label"><i class="fa-solid fa-square-phone"></i>  Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-3">
+                <label for="skills" class="form-label"><i class="fa-brands fa-font-awesome"></i>  Skills</label>
+                <input type="text" class="form-control" id="skills" name="skills" placeholder="Enter your skills, separated by commas" data-role="tagsinput">
+                <small class="form-text text-muted">Enter skills separated by commas (e.g., JavaScript, HTML, CSS)</small>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="mb-3">
+                <label for="workExperience" class="form-label"><i class="fa-solid fa-suitcase"></i>  Work Experience</label>
+                <textarea class="form-control" id="workExperience" name="workExperience" rows="3" placeholder="Enter your work experience"></textarea>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-3">
+                <label for="education" class="form-label"><i class="fa-solid fa-school"></i>  Education</label>
+                <textarea class="form-control" id="education" name="education" rows="3" placeholder="Enter your education details"></textarea>
+            </div>
+
+            <!-- Upload Resume -->
+            <!-- <div class="mb-3">
+                <label for="resume" class="form-label"><i class="fa-solid fa-upload"></i>  Upload Resume</label>
+                <input type="file" class="form-control" id="resume" name="resume">
+                <small class="form-text text-muted">Upload your resume in PDF or Word format</small>
+            </div>
+ -->
+            <!-- Submit Button -->
+            <div class="form-group mb-4 ms-4 mt-3 text-center">
+            	<button type="submit" class="btn btn-success text-white">Submit</button>
+            </div>
+        </form>
+    </div>	
+    </section>
+    
+    <script>
+        // Initialize Bootstrap Tags Input
+        $('#skills').tagsinput({
+            tagClass: 'badge bg-primary'
+        });
+    </script>
+	
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* style.css */
+/* Apply Google Font */
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5EAF5 ! important;
+}
+
+.bg-primary {
+	background: #004085 !important;
+}
+
+.btn-primary {
+	background: #004085 !important;
+}
+
+.d1 {
+	text-decoration: none;
+}
+
+.my-card {
+	background: #FFFFFF;
+}
+
+/* Navbar styling */
+.navbar {
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 1rem 2rem;
+	position: fixed; /* Make the navbar sticky */
+	top: 0; /* Stick it to the top */
+	width: 100%; /* Full width */
+	z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.nav-link {
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem; /* Increase padding for spacing */
+	transition: color 0.3s ease, border-bottom 0.3s ease;
+	margin: 0 0.5rem; /* Add margin between links */
+}
+
+.nav-link:hover {
+	color: #ffffffcc;
+	text-decoration: overline red;
+	/* Default underline on hover for all links */
+}
+
+.navbar-toggler-icon {
+	filter: brightness(0) invert(1);
+}
+
+/* Button styling for Login and SignUp */
+.btn-light, .btn-primary {
+	color: #000; /* Text color */
+	background-color: #fff; /* Background color */
+	border: 1px solid #ddd; /* Border color */
+	padding: 0.5rem 1rem; /* Padding for buttons */
+	border-radius: 50px; /* Make buttons capsule-shaped */
+	transition: background-color 0.3s ease, color 0.3s ease, border 0.3s
+		ease, transform 0.3s ease;
+}
+
+.btn-light:hover, .btn-primary:hover {
+	background-color: #f0f0f0; /* Light grey background on hover */
+	border: 1px solid #ccc; /* Slightly darker border on hover */
+	transform: scale(0.95); /* Make button smaller */
+	text-decoration: blink; /* Remove underline from links */
+}
+
+/* Background image styling for Home page */
+.banner1 {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+		url(../images/jobListing01.jpg);
+	background-size: cover;
+	color: white;
+}
+
+.banner2 {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+		url(../images/lake.jpg);
+	background-size: cover;
+	color: white;
+}
+
+/* Center text styling */
+.center-text {
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.center-text h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.center-text p {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.center-text .btn-search {
+	font-size: 1.25rem;
+	padding: 0.75rem 2rem;
+}
+
+/* Login form */
+.topo {
+	margin: 0;
+	padding: 0;
+	background-color: #17a2b8;
+	height: 100vh;
+}
+
+#login .container #login-row #login-column #login-box {
+	margin-top: 120px;
+	max-width: 600px;
+	height: 420px;
+	border: 1px solid #9C9C9C;
+	background-color: white;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+	padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link
+	{
+	margin-top: -85px;
+}
